@@ -1,0 +1,20 @@
+@ -0,0 +1,19 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int units,bill_amt;
+clrscr();
+printf("enter your units\n");
+scanf("%d",&units);
+if(units<=100)
+bill_amt=units*2;
+else if(units<=200)
+bill_amt=(units-100)*4+200;
+else if(units<=300)
+bill_amt=(units-200)*6+200+400;
+else if(units<=400)
+bill_amt=(units-300)*8+200+400+600;
+printf("bill amt%d",bill_amt);
+}
+getch();
