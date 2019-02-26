@@ -1,0 +1,61 @@
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int balance=20000000,withdraw_amount,deposite_amount;
+int option,pin,count=0;
+start:
+count++;
+clrscr();
+printf("enter your pin");
+scanf("%d",&pin);
+if(pin==12345)
+{
+printf("welcome to SBI Bank\n");
+printf("\n1.withdraw\n2.deposite\n3.balance\n4.exit");
+printf("\nselect option\n");
+scanf("\n%d",&option);
+switch(option)
+{
+case 1:
+printf("enter withdraw amount\n");
+scanf("%d",&withdraw_amount);
+if(balance>=withdraw_amount)
+{
+balance=balance - withdraw_amount;
+printf("\nRs.%d is succesfully withdraw",withdraw_amount);
+printf("\nRs.%d is your remaining balance",balance);
+}
+else
+printf("\ninsufficient balance");
+break;
+case 2:
+printf("\nenter deposite amount");
+scanf("%d",&deposite_amount);
+balance=balance + deposite_amount;
+printf("\namount succesfully deposit");
+printf("\nRs.%dyour update balance",balance);
+break;
+case 3:
+printf("\nremaining balance is Rs.%d",balance);
+break;
+case 4:
+printf("exit");
+break;
+default:
+printf("\ninvalid option");
+}
+}
+else
+{
+if(count<3)
+{
+printf("wrong pin");
+goto start;
+}
+printf("wrong pin");
+}
+}
+
+
