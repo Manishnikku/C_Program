@@ -1,0 +1,12 @@
+#define sq(x)x*x
+#define cube(x) sq(x)*x
+void main()
+{
+int n;
+clrscr();
+printf("enter a no");
+scanf("%d",&n);
+printf("\nsquare of %d is %d",n,sq(n));
+printf("\ncube=%d",cube(n));
+getch();
+}
